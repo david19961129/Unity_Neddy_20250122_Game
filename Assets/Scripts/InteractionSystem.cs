@@ -17,10 +17,7 @@ namespace NEDDY
         private IInteraction interactionObject;
         private WorldToUIPosition interactionPosition;
 
-        private void Awake()
-        {
-            interactionPosition = aniInteractionUI.GetComponent<WorldToUIPosition>();
-        }
+        private void Awake(){interactionPosition = aniInteractionUI.GetComponent<WorldToUIPosition>();}
 
         //觸發事件
         //collision 儲存碰到物件的碰撞資訊

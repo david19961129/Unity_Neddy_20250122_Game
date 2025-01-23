@@ -28,12 +28,12 @@ namespace NEDDY
         {
             //先得目標物世界座標
             Vector3 worldPosition = target.position;
-            // 位移座標
+            //位移座標
             worldPosition += offset;
             //將世界座標轉為螢幕座標
-            Vector3 screen  = Camera.main.WorldToScreenPoint(worldPosition);
+            Vector3 screen = Camera.main.WorldToScreenPoint(worldPosition);
             //將螢幕座標傳為介面座標
-            RectTransformUtility.ScreenPointToLocalPointInRectangle(rectCanvas, screen,worldCamera,out Vector2 uiposition);
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(rectCanvas, screen, worldCamera, out Vector2 uiposition);
             //更新介面座標
             rect.anchoredPosition = uiposition;
         }
