@@ -62,6 +62,13 @@ namespace NEDDY
             rig.velocity = Vector2.zero;
             ani.SetFloat (parMove, 0);
         }
+        /// <summary>
+        /// 開啟所有控制=NPC對話上使用
+        /// </summary>
+        public void OpenAllControl()
+        {
+            canControl = true;
+        }
 #if UNITY_EDITOR
         /// <summary>
         /// 測試用:全開

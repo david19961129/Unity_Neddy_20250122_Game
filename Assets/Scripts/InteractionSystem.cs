@@ -28,7 +28,7 @@ namespace NEDDY
                 aniInteractionUI.SetTrigger(parFadeIn);
                 startInteraction = true;
                 interactionObject=interaction;
-                interactionPosition.UpdatePosition(collision.transform, Vector3.zero);
+                interactionPosition.UpdatePosition(collision.transform, interaction.uiOffset);
             }
         }
 
