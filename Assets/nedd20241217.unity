@@ -5716,6 +5716,7 @@ MonoBehaviour:
   "\u90F5\u7BB1": {fileID: 1340170828}
   isQuestAccepted: 0
   isLetterDelivered: 0
+  flowchart: {fileID: 0}
 --- !u!1001 &408632587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39686,9 +39687,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3.3
-  "\u4FE1\u5C01": {fileID: 372682011}
-  pickupDistance: 2
-  deliveryDistance: 2
 --- !u!50 &1902319977
 Rigidbody2D:
   serializedVersion: 4
@@ -40402,6 +40400,7 @@ GameObject:
   - component: {fileID: 1945933975}
   - component: {fileID: 1945933973}
   - component: {fileID: 1945933972}
+  - component: {fileID: 1945933978}
   m_Layer: 0
   m_Name: Flowchart_NPC
   m_TagString: Untagged
@@ -40523,7 +40522,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 74.02533
     y: 39.05883
-    width: 104.4
+    width: 105.38461
     height: 40
   tint: {r: 0.5254902, g: 0.6807137, b: 1, a: 0.99215686}
   useCustomTint: 1
@@ -40550,19 +40549,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 57.146076, y: 11.877316}
+  scrollPos: {x: 85.86486, y: 23.762104}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 380.8
-  zoom: 1
+  zoom: 0.9100001
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 1945933967}
+  selectedBlocks: []
   selectedCommands: []
   variables:
   - {fileID: 1945933968}
@@ -40608,7 +40606,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 124
     y: 92.5
-    width: 98
+    width: 99.23077
     height: 40
   tint: {r: 1, g: 0, b: 0, a: 1}
   useCustomTint: 1
@@ -40740,8 +40738,8 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 21.199997
-    y: 94.3
-    width: 98
+    y: 95.17911
+    width: 99.23077
     height: 40
   tint: {r: 0.1546716, g: 1, b: 0.0141509175, a: 1}
   useCustomTint: 1
@@ -40754,6 +40752,7 @@ MonoBehaviour:
   - {fileID: 1945933970}
   - {fileID: 1945933974}
   - {fileID: 1945933973}
+  - {fileID: 1945933978}
   suppressAllAutoSelections: 0
 --- !u!114 &1945933968
 MonoBehaviour:
@@ -40806,7 +40805,7 @@ MonoBehaviour:
   delay: 0
 --- !u!114 &1945933972
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -41159,9 +41158,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 32.120396
-    y: 150.74088
-    width: 98
+    x: 21.570946
+    y: 164.80675
+    width: 99.23077
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -41228,6 +41227,27 @@ MonoBehaviour:
   stringEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1945933978
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1945933949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050fb9e6e72f442b3b883da8a965bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 25
+  indentLevel: 1
+  targetFlowchart: {fileID: 0}
+  targetBlock: {fileID: 1945933976}
+  startLabel:
+    stringRef: {fileID: 0}
+    stringVal: 
+  startIndex: 0
+  callMode: 0
 --- !u!1001 &1947356143
 PrefabInstance:
   m_ObjectHideFlags: 0
