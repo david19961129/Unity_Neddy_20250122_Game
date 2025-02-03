@@ -33,9 +33,15 @@ public class QuestManager : MonoBehaviour
     // 检查信是否送达
     public void CheckDelivery(Transform player)
     {
+        Debug.Log("检查信是否送达...");
+        Debug.Log("isQuestAccepted: " + isQuestAccepted);
+        Debug.Log("isLetterDelivered: " + isLetterDelivered);
+
         if (isQuestAccepted && !isLetterDelivered)
         {
             float distance = Vector3.Distance(player.position, 郵箱.transform.position);
+            Debug.Log("玩家与邮箱的距离：" + distance);
+
             if (distance < 2.0f) // 如果玩家靠近邮箱
             {
                 isLetterDelivered = true;
@@ -46,6 +52,11 @@ public class QuestManager : MonoBehaviour
                 if (flowchart != null)
                 {
                     flowchart.SetBooleanVariable("isLetterDelivered", true);
+                    Debug.Log("Fungus 变量已更新：isLetterDelivered = true");
+                }
+                else
+                {
+                    Debug.LogError("Flowchart 未赋值！");
                 }
             }
         }
