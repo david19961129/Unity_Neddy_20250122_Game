@@ -53,7 +53,7 @@ public class ControlSystem : MonoBehaviour
         ani.SetFloat("V", v);
     }
 
-    // 检查是否拾取信
+    // 检查是否與拾取信
     private void CheckPickupLetter()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -62,7 +62,7 @@ public class ControlSystem : MonoBehaviour
             if (distanceToLetter < 2.0f)
             {
                 questManager.信封.transform.SetParent(transform); // 将信设为玩家的子对象
-                questManager.信封.transform.localPosition = new Vector3(0, 1, 1); // 调整信的位置
+                questManager.信封.transform.localPosition = new Vector3(0, 0.5f, 1); // 调整信的位置
                 Debug.Log("你拾取了信。");
             }
         }

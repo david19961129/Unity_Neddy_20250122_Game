@@ -10,6 +10,8 @@ public class QuestManager : MonoBehaviour
 
     public Flowchart flowchart; // 引用 Fungus 的 Flowchart
 
+    public Transform 信封位置; // 信封的 Transform
+
     private void Start()
     {
         信封.SetActive(false); // 初始隐藏
@@ -30,18 +32,22 @@ public class QuestManager : MonoBehaviour
         Debug.Log("任务已拒绝。");
     }
 
-    // 检查信是否送达
-    public void CheckDelivery(Transform player)
+    void Update()
     {
-        Debug.Log("检查信是否送达...");
-        Debug.Log("isQuestAccepted: " + isQuestAccepted);
-        Debug.Log("isLetterDelivered: " + isLetterDelivered);
-
         if (isQuestAccepted && !isLetterDelivered)
         {
-            float distance = Vector3.Distance(player.position, 郵箱.transform.position);
-            Debug.Log("玩家与邮箱的距离：" + distance);
+            CheckDelivery(信封位置); // 传递玩家的 Transform
+        }
+    }
 
+    // 检查信是否送达
+    public void CheckDelivery(Transform 信封位置)
+    {
+        Debug.Log("检查信是否送达...");
+        if (isQuestAccepted && !isLetterDelivered)
+        {
+            float distance = Vector3.Distance(信封位置.position, 郵箱.transform.position);
+            Debug.Log("玩家与邮箱的距离：" + distance);
             if (distance < 2.0f) // 如果玩家靠近邮箱
             {
                 isLetterDelivered = true;
@@ -52,11 +58,6 @@ public class QuestManager : MonoBehaviour
                 if (flowchart != null)
                 {
                     flowchart.SetBooleanVariable("isLetterDelivered", true);
-                    Debug.Log("Fungus 变量已更新：isLetterDelivered = true");
-                }
-                else
-                {
-                    Debug.LogError("Flowchart 未赋值！");
                 }
             }
         }
