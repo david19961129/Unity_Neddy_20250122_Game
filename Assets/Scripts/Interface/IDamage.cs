@@ -9,7 +9,7 @@
         public void Damage(float damage);
 
         /// <summary>
-        /// 
+        /// 死亡
         /// </summary>
         public void Dead();
     }

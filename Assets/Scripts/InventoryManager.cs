@@ -2,8 +2,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace NEDDY
-{
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance; // 单例模式
@@ -47,30 +45,21 @@ public class InventoryManager : MonoBehaviour
         UpdateUI();
     }
 
-        // 更新背包 UI
-        private void UpdateUI()
+    // 更新背包 UI
+    private void UpdateUI()
+    {
+        // 清空所有道具槽
+        foreach (Transform slot in itemSlotsParent)
         {
-            // 清空所有道具槽
-            for (int i = 0; i < itemSlotsParent.childCount; i++)
-            {
-                Image slotImage = itemSlotsParent.GetChild(i).GetComponent<Image>();
-                if (slotImage != null)
-                {
-                    slotImage.sprite = null;
-                    slotImage.enabled = false;
-                }
-            }
+            slot.GetComponent<Image>().sprite = null;
+            slot.GetComponent<Image>().enabled = false;
+        }
 
-            // 更新道具槽
-            for (int i = 0; i < items.Count && i < itemSlotsParent.childCount; i++)
-            {
-                Image slotImage = itemSlotsParent.GetChild(i).GetComponent<Image>();
-                if (slotImage != null)
-                {
-                    slotImage.sprite = items[i].icon;
-                    slotImage.enabled = true;
-                }
-            }
+        // 更新道具槽
+        for (int i = 0; i < items.Count; i++)
+        {
+            itemSlotsParent.GetChild(i).GetComponent<Image>().sprite = items[i].icon;
+            itemSlotsParent.GetChild(i).GetComponent<Image>().enabled = true;
         }
     }
 }

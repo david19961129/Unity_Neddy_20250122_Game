@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace NEDDY
-{
 public class InventorySlot : MonoBehaviour
 {
     public Image icon; // 道具图标
@@ -37,5 +35,4 @@ public class InventorySlot : MonoBehaviour
             // 这里可以添加使用道具的逻辑
         }
     }
-}
 }
