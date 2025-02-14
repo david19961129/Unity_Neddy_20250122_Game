@@ -3,44 +3,35 @@ using UnityEngine.UI;
 
 namespace NEDDY
 {
-public class InventorySlot : MonoBehaviour
-{
-        //開始編號給InventoryManager
-        //如空位有變動回傳給InventoryManager 
-        //public string 口袋編號;  //自己編號位置編號
-        //如無空位接收Item.icon該縮圖，並顯示至IMAGE
-
-    public Image icon; // 道具图标
-    public Button button; // 道具槽按钮
-
-    private Item item; // 当前道具
-
-    // 添加道具到槽
-    public void AddItem(Item newItem)
+    public class InventorySlot : MonoBehaviour
     {
-        item = newItem;
-        icon.sprite = item.icon;
-        icon.enabled = true;
-        button.interactable = true;
-    }
+        public Image icon; // 道具图标 (顯示在 UI)
+        public Button button; // 道具槽按钮
+        public bool 佔用狀態 = false; // 子物件的狀態
 
-    // 清空槽
-    public void ClearSlot()
-    {
-        item = null;
-        icon.sprite = null;
-        icon.enabled = false;
-        button.interactable = false;
-    }
-
-    // 点击道具槽
-    public void OnSlotClick()
-    {
-        if (item != null)
+        void Update()
         {
-            Debug.Log("使用道具：" + item.itemName);
-            // 这里可以添加使用道具的逻辑
+            // 檢查是否有子物件
+            佔用狀態 = transform.childCount > 0;
+
+            if (佔用狀態)
+            {
+                // 取得第一個子物件的 Item 組件
+                Item item = transform.GetChild(0).GetComponent<Item>();
+
+                // 如果找到 Item，將圖示更新到 UI 上
+                if (item != null)
+                {
+                    icon.sprite = item.icon;
+                    icon.enabled = true; // 確保 Image 顯示
+                }
+            }
+            else
+            {
+                // 若沒有子物件，清空圖示
+                icon.sprite = null;
+                icon.enabled = false;
+            }
         }
     }
-}
 }

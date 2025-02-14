@@ -1,59 +1,32 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 namespace NEDDY
 {
-public class InventoryManager : MonoBehaviour
-{
-        //接收編號與空位並儲存
-    public static InventoryManager Instance; // 单例模式
-
-    public List<Item> items = new List<Item>(); // 背包中的道具列表
-    public Transform itemSlotsParent; // 道具槽的父对象
-    public GameObject inventoryUI; // 背包 UI
-
-    private void Update()
+    public class InventoryManager : MonoBehaviour
     {
-        // 按 Tab 键打开/关闭背包
-        if (Input.GetKeyDown(KeyCode.Tab))
+        public GameObject inventoryUI; // 背包 UI
+        public static InventoryManager Instance;
+        public Transform itemSlotsParent; // 口袋的父物件（背包 UI）
+
+        void Awake()
         {
-            inventoryUI.SetActive(!inventoryUI.activeSelf);
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
-    }
-
-    // 添加道具到背包
-    public void AddItem(Item newItem)
-    {
-        items.Add(newItem);
-        UpdateUI();
-        Debug.Log("添加道具：" + newItem.itemName);
-    }
-
-    // 从背包移除道具
-    public void RemoveItem(Item itemToRemove)
-    {
-        items.Remove(itemToRemove);
-        UpdateUI();
-        Debug.Log("移除道具：" + itemToRemove.itemName);
-    }
-
-    // 更新背包 UI
-    private void UpdateUI()
-    {
-        // 清空所有道具槽
-        foreach (Transform slot in itemSlotsParent)
+        private void Update()
         {
-            slot.GetComponent<Image>().sprite = null;
-            slot.GetComponent<Image>().enabled = false;
+            // 按 Tab 键打开/关闭背包
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                inventoryUI.SetActive(!inventoryUI.activeSelf);
+            }
         }
 
-        // 更新道具槽
-        for (int i = 0; i < items.Count; i++)
-        {
-            itemSlotsParent.GetChild(i).GetComponent<Image>().sprite = items[i].icon;
-            itemSlotsParent.GetChild(i).GetComponent<Image>().enabled = true;
-        }
     }
-}
 }
