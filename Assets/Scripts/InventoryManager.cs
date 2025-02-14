@@ -2,25 +2,16 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace NEDDY
+{
 public class InventoryManager : MonoBehaviour
 {
+        //接收編號與空位並儲存
     public static InventoryManager Instance; // 单例模式
 
     public List<Item> items = new List<Item>(); // 背包中的道具列表
     public Transform itemSlotsParent; // 道具槽的父对象
     public GameObject inventoryUI; // 背包 UI
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
 
     private void Update()
     {
@@ -36,6 +27,7 @@ public class InventoryManager : MonoBehaviour
     {
         items.Add(newItem);
         UpdateUI();
+        Debug.Log("添加道具：" + newItem.itemName);
     }
 
     // 从背包移除道具
@@ -43,6 +35,7 @@ public class InventoryManager : MonoBehaviour
     {
         items.Remove(itemToRemove);
         UpdateUI();
+        Debug.Log("移除道具：" + itemToRemove.itemName);
     }
 
     // 更新背包 UI
@@ -62,4 +55,5 @@ public class InventoryManager : MonoBehaviour
             itemSlotsParent.GetChild(i).GetComponent<Image>().enabled = true;
         }
     }
+}
 }

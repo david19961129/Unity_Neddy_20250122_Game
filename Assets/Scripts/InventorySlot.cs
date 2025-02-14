@@ -1,8 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+namespace NEDDY
+{
 public class InventorySlot : MonoBehaviour
 {
+        //開始編號給InventoryManager
+        //如空位有變動回傳給InventoryManager 
+        //public string 口袋編號;  //自己編號位置編號
+        //如無空位接收Item.icon該縮圖，並顯示至IMAGE
+
     public Image icon; // 道具图标
     public Button button; // 道具槽按钮
 
@@ -35,4 +42,5 @@ public class InventorySlot : MonoBehaviour
             // 这里可以添加使用道具的逻辑
         }
     }
+}
 }
