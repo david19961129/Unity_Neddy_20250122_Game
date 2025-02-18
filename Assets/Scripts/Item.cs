@@ -8,13 +8,11 @@ namespace NEDDY
         public Sprite icon;       // 道具縮圖
         public string description; // 道具描述
 
-        private Transform 待分類道具;
         private GameObject player;
         private InventoryManager inventoryManager;
 
         void Start()
         {
-            待分類道具 = GameObject.Find("版本二/小貓/背包UI/待分類道具").transform;
             player = GameObject.FindGameObjectWithTag("Player");
             inventoryManager = GameObject.FindObjectOfType<InventoryManager>();
         }
@@ -44,16 +42,20 @@ namespace NEDDY
                 return;
             }
 
-            foreach (Transform pocket in inventoryManager.itemSlotsParent) // 直接遍歷所有口袋
+            foreach (Transform pocket in inventoryManager.itemSlotsParent) // 遍歷所有口袋
             {
                 InventorySlot slot = pocket.GetComponent<InventorySlot>(); // 獲取口袋的狀態腳本
                 if (slot != null && !slot.佔用狀態) // 如果口袋是空的
                 {
-                    transform.SetParent(pocket); // 設置道具為該口袋的子物件
+                    Debug.Log($"將 {itemName} 放入 {pocket.name}");
+                    transform.SetParent(pocket, false); // 設置道具為該口袋的子物件
                     transform.localPosition = Vector3.zero; // 重設位置
+
                     slot.佔用狀態 = true; // 設置口袋為已佔用
-                    gameObject.SetActive(false); // 撿起後隱藏道具
-                    Debug.Log($"道具 {itemName} 已放入口袋 {pocket.name}");
+                    slot.更新圖片(icon); // **直接更新 UI，不用等 Update**
+
+                    gameObject.SetActive(true); // 確保物件仍然啟用
+                    Debug.Log($"道具 {itemName} 已存入 {pocket.name}");
                     return; // 成功放入後，結束函式
                 }
             }
