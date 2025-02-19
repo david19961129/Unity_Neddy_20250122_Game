@@ -36437,6 +36437,7 @@ GameObject:
   - component: {fileID: 1550756145}
   - component: {fileID: 1550756147}
   - component: {fileID: 1550756146}
+  - component: {fileID: 1550756148}
   m_Layer: 5
   m_Name: "\u7FA4\u7D44\u7D50\u675F\u756B\u9762"
   m_TagString: Untagged
@@ -36504,6 +36505,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1550756144}
   m_CullTransparentMesh: 1
+--- !u!225 &1550756148
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550756144}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1001 &1552936810
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44669,7 +44682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2046464321
 RectTransform:
   m_ObjectHideFlags: 0

@@ -3,6 +3,9 @@ using UnityEngine.UI;
 
 namespace NEDDY
 {
+    /// <summary>
+    /// 口袋
+    /// </summary>
     public class InventorySlot : MonoBehaviour
     {
         public bool 佔用狀態 = false; // 子物件的狀態

@@ -2,6 +2,9 @@
 
 namespace NEDDY
 {
+    /// <summary>
+    /// 背包列表
+    /// </summary>
     public class InventoryManager : MonoBehaviour
     {
         public GameObject inventoryUI; // 背包 UI

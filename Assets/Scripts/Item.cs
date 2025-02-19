@@ -3,6 +3,9 @@ using UnityEngine.UI;
 
 namespace NEDDY
 {
+    /// <summary>
+    /// 道具掛載
+    /// </summary>
     public class Item : MonoBehaviour
     {
         public string itemName;   // 道具名稱
