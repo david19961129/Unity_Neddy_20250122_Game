@@ -5659,8 +5659,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a7578066e2de742ae440e70ea40673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  button: {fileID: 0}
   "\u4F54\u7528\u72C0\u614B": 0
 --- !u!1001 &391642203
 PrefabInstance:
@@ -6291,8 +6289,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a7578066e2de742ae440e70ea40673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  button: {fileID: 0}
   "\u4F54\u7528\u72C0\u614B": 0
 --- !u!1 &461690915
 GameObject:
@@ -14309,8 +14305,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a7578066e2de742ae440e70ea40673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  button: {fileID: 0}
   "\u4F54\u7528\u72C0\u614B": 0
 --- !u!1 &1070551494
 GameObject:
@@ -16036,7 +16030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f2bbe4e0c810346ba2bc3dee3ee8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: "\u82AC"
   icon: {fileID: -1734298994132575547, guid: 57c5edbfc80e3b84fb1b08050257d039, type: 3}
   description: 
 --- !u!212 &1163380763
@@ -35600,8 +35594,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a7578066e2de742ae440e70ea40673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  button: {fileID: 0}
   "\u4F54\u7528\u72C0\u614B": 0
 --- !u!1 &1534711818
 GameObject:
@@ -37364,8 +37356,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a7578066e2de742ae440e70ea40673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  button: {fileID: 0}
   "\u4F54\u7528\u72C0\u614B": 0
 --- !u!1 &1670684142
 GameObject:
@@ -37861,8 +37851,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a7578066e2de742ae440e70ea40673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  button: {fileID: 0}
   "\u4F54\u7528\u72C0\u614B": 0
 --- !u!1001 &1702442699
 PrefabInstance:
@@ -40005,8 +39993,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f2bbe4e0c810346ba2bc3dee3ee8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: 
-  icon: {fileID: -1734298994132575547, guid: 57c5edbfc80e3b84fb1b08050257d039, type: 3}
+  itemName: basic
+  icon: {fileID: -5031486422384086316, guid: 591d87f7bec03be4c9bb47e6bc569bc3, type: 3}
   description: 
 --- !u!212 &1841730086
 SpriteRenderer:
@@ -44454,8 +44442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6a7578066e2de742ae440e70ea40673, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  icon: {fileID: 0}
-  button: {fileID: 0}
   "\u4F54\u7528\u72C0\u614B": 0
 --- !u!1001 &2077364458
 PrefabInstance:

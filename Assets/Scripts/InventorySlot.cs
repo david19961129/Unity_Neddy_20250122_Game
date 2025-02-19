@@ -5,22 +5,27 @@ namespace NEDDY
 {
     public class InventorySlot : MonoBehaviour
     {
-        public Image icon; // 道具圖標 (顯示在 UI)
-        public Button button; // 道具槽按鈕
         public bool 佔用狀態 = false; // 子物件的狀態
 
         void Update()
         {
-            // 只有當有子物件時才更新 icon
-            if (transform.childCount > 0)
+            // 檢查是否有子物件
+            佔用狀態 = transform.childCount > 0;
+
+            // 如果有物品，確保 UI 圖示正確
+            if (佔用狀態)
             {
                 Item item = transform.GetChild(0).GetComponent<Item>();
-
-                if (item != null && icon != null)
+                if (item != null)
                 {
-                    icon.sprite = item.icon;
-                    icon.enabled = true; // 確保顯示
+                    GetComponent<Image>().sprite = item.icon;
+                    GetComponent<Image>().enabled = true;
                 }
+            }
+            else
+            {
+                GetComponent<Image>().sprite = null;
+                GetComponent<Image>().enabled = false;
             }
         }
     }

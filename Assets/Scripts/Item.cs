@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace NEDDY
 {
@@ -52,9 +53,11 @@ namespace NEDDY
                     transform.localPosition = Vector3.zero; // 重設位置
 
                     slot.佔用狀態 = true; // 設置口袋為已佔用
-                    slot.更新圖片(icon); // **直接更新 UI，不用等 Update**
+                    slot.GetComponent<Image>().sprite = icon; // 直接更新 UI
+                    slot.GetComponent<Image>().enabled = true; // 確保顯示
 
-                    gameObject.SetActive(true); // 確保物件仍然啟用
+                    gameObject.SetActive(false); // 撿起後隱藏
+
                     Debug.Log($"道具 {itemName} 已存入 {pocket.name}");
                     return; // 成功放入後，結束函式
                 }
