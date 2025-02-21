@@ -1,13 +1,11 @@
-﻿using UnityEngine;
-
-namespace NEDDY
+﻿namespace NEDDY
 {
     interface IState
     {
         /// <summary>
         /// 進入狀態
         /// </summary>
-        void EnerState();
+        void EnterState();
         /// <summary>
         /// 更新狀態
         /// </summary>

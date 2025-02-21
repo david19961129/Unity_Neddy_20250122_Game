@@ -11,16 +11,13 @@ public class HpSystem : MonoBehaviour , IDamage
         private float hp;
         private Animator ani;
         private string parDead = "觸發死亡";
-        private SpriteRenderer spr;
-        private Material mat;
-        private string parDamageValue = "_damageValue";
+        
 
         private void Awake()
         {
             hp=dataHP.hpmax;
             ani = GetComponent<Animator>();
-            spr = GetComponent<SpriteRenderer>();
-            mat = spr.material;
+            
         }
         public void Damage(float damage)
         {
