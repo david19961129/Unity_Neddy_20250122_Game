@@ -11,7 +11,7 @@ namespace NEDDY
         protected string stateName;
         protected Animator ani;
         protected Rigidbody2D rig;
-        protected string parMove = "移動數值";
+        protected string parMove = "觸發攻擊";
         protected string parAttack = "觸發攻擊";
 
         protected virtual void Awake()

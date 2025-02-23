@@ -9,7 +9,7 @@ namespace NEDDY
         private Vector3 pointLeft;
         [SerializeField, Header("右邊界")]
         private Vector3 pointRight;
-        [SerializeField, Header("移動速度"),Range(0,10)]
+        [SerializeField, Header("移動速度"),Range(0,3)]
         private float wanderSpeed = 2;
         [SerializeField, Header("停止距離"), Range(0, 1)]
         private float stopDistance = 0.1f;
