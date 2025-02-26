@@ -23,6 +23,25 @@ namespace NEDDY
         private Vector3 targetPoint;
         private bool isIdle;
 
+        [SerializeField] private Transform player; // 玩家物件
+        [SerializeField] private Transform teleportTarget; // 目標位置
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.transform == player) // 確保碰撞的對象是玩家
+            {
+                if (teleportTarget != null)
+                {
+                    player.position = teleportTarget.position; // 傳送玩家
+                    Debug.Log("玩家已被傳送到：" + teleportTarget.position);
+                }
+                else
+                {
+                    Debug.LogError("沒有設定 teleportTarget！");
+                }
+            }
+        }
+
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = new Color(1,0.3f,0.3f,0.8f);
