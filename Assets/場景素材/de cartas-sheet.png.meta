@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 58efd231ba445e44cb7be236c91b0015
+guid: 3ab802ba90611bb488de02db65788f67
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 48
@@ -97,7 +97,7 @@ TextureImporter:
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -117,15 +117,15 @@ TextureImporter:
         y: 0
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd793977193468544a6eee10055a2767
-      internalID: 899634668
+      spriteID: 2b48d7dca8b5e844db56ac3e734df74a
+      internalID: -230522194
       vertices: []
       indices: 
       edges: []
@@ -138,15 +138,15 @@ TextureImporter:
         y: 0
         width: 48
         height: 48
-      alignment: 9
-      pivot: {x: 0.5, y: 0.2}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 293e625238477d04dbe35c4b97c81a00
-      internalID: -8183887
+      spriteID: a5f82ab57b4c5e7439f63b8cb4a12c5c
+      internalID: -1901223679
       vertices: []
       indices: 
       edges: []
@@ -162,8 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      de cartas-sheet_0: 899634668
-      de cartas-sheet_1: -8183887
+      de cartas-sheet_0: -230522194
+      de cartas-sheet_1: -1901223679
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

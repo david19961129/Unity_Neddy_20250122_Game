@@ -47,12 +47,13 @@ public class QuestManager : MonoBehaviour
         if (isQuestAccepted && !isLetterDelivered)
         {
             float distance = Vector3.Distance(信封位置.position, 郵箱.transform.position);
-            Debug.Log("玩家与邮箱的距离：" + distance);
+            // Debug.Log("玩家与邮箱的距离：" + distance);
             if (distance < 2.0f) // 如果玩家靠近邮箱
             {
                 isLetterDelivered = true;
-                信封.SetActive(false); // 隐藏信封
+                //信封.SetActive(false); // 隐藏信封
                 Debug.Log("任务完成：信已送达邮箱！");
+                Destroy(信封);
 
                 // 更新 Fungus 变量
                 if (flowchart != null)

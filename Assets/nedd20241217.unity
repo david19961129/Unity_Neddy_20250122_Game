@@ -3764,7 +3764,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1717895916}
+  selectedFlowchart: {fileID: 863544418}
 --- !u!4 &243458348
 Transform:
   m_ObjectHideFlags: 1
@@ -6657,7 +6657,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372682011}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 23f2bbe4e0c810346ba2bc3dee3ee8c5, type: 3}
   m_Name: 
@@ -14375,7 +14375,7 @@ GameObject:
   - component: {fileID: 863544415}
   - component: {fileID: 863544414}
   - component: {fileID: 863544413}
-  - component: {fileID: 863544412}
+  - component: {fileID: 863544422}
   m_Layer: 0
   m_Name: "Flowchart_\u7D42\u9EDE\u606D\u559C_"
   m_TagString: Untagged
@@ -14392,68 +14392,12 @@ Transform:
   m_GameObject: {fileID: 863544410}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 81.01, y: -14.27, z: 0}
+  m_LocalPosition: {x: 81.85, y: -14.64, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1571157574}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &863544412
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 863544410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 4
-  indentLevel: 0
-  description: 
-  delay: 0
-  invokeType: 0
-  staticEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1902319976}
-        m_TargetAssemblyTypeName: NEDDY.ControlSystem, Assembly-CSharp
-        m_MethodName: set_canControl
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  booleanParameter:
-    booleanRef: {fileID: 0}
-    booleanVal: 0
-  booleanEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  integerParameter:
-    integerRef: {fileID: 0}
-    integerVal: 0
-  integerEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  floatParameter:
-    floatRef: {fileID: 0}
-    floatVal: 0
-  floatEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  stringParameter:
-    stringRef: {fileID: 0}
-    stringVal: 
-  stringEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &863544413
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -14627,7 +14571,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 863544413}
   - {fileID: 863544414}
-  - {fileID: 863544412}
+  - {fileID: 863544422}
   suppressAllAutoSelections: 0
 --- !u!114 &863544418
 MonoBehaviour:
@@ -14642,10 +14586,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 151.6464, y: 99.98581}
+  scrollPos: {x: 150.21782, y: 99.98581}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 200
+  blockViewHeight: 242
   zoom: 0.7000003
   scrollViewRect:
     serializedVersion: 2
@@ -14656,7 +14600,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 863544417}
   selectedCommands:
-  - {fileID: 863544414}
+  - {fileID: 863544413}
   variables: []
   description: 
   stepPause: 0
@@ -14668,6 +14612,62 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &863544422
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863544410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95d9ff288f3904c05ada7ac9c9a075bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 29
+  indentLevel: 0
+  description: 
+  delay: 0
+  invokeType: 0
+  staticEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1902319976}
+        m_TargetAssemblyTypeName: NEDDY.ControlSystem, Assembly-CSharp
+        m_MethodName: set_canControl
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  booleanParameter:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  booleanEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  integerParameter:
+    integerRef: {fileID: 0}
+    integerVal: 0
+  integerEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  floatParameter:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  floatEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  stringParameter:
+    stringRef: {fileID: 0}
+    stringVal: 
+  stringEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &865945426
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18897,7 +18897,7 @@ Transform:
   m_GameObject: {fileID: 1119861987}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 86.01938, y: -7.889729, z: -10.034164}
+  m_LocalPosition: {x: 86.12938, y: -8.439729, z: -10.034164}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21102,7 +21102,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 40, y: 15}
+  m_Size: {x: 38.5, y: 15}
   m_EdgeRadius: 0
 --- !u!1001 &1253712475
 PrefabInstance:
@@ -22483,7 +22483,7 @@ Transform:
   m_GameObject: {fileID: 1340170828}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 81.16, y: -14.34, z: 0.03416429}
+  m_LocalPosition: {x: 81.83, y: -14.57, z: 0.03416429}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22530,12 +22530,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 899634668, guid: 58efd231ba445e44cb7be236c91b0015, type: 3}
+  m_Sprite: {fileID: -1901223679, guid: 3ab802ba90611bb488de02db65788f67, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 0.48, y: 0.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -22573,18 +22573,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.45000002}
+  m_Offset: {x: 0, y: -0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.2}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 1.5, y: 1.5}
+    newSize: {x: 0.48, y: 0.48}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 0.7, y: 0.63}
   m_EdgeRadius: 0
 --- !u!70 &1340170832
 CapsuleCollider2D:
@@ -22618,7 +22618,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.29999995}
+  m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.6, y: 0.73}
   m_Direction: 0
 --- !u!1001 &1354113349
@@ -41704,12 +41704,12 @@ Transform:
   - {fileID: 1965312288}
   - {fileID: 907211671}
   - {fileID: 1525251076}
-  - {fileID: 1945933957}
   - {fileID: 1534711821}
   - {fileID: 1522799782}
-  - {fileID: 1789457372}
   - {fileID: 1018878800}
   - {fileID: 1579882415}
+  - {fileID: 1789457372}
+  - {fileID: 1945933957}
   - {fileID: 1483688553}
   - {fileID: 282186704}
   - {fileID: 1717895909}
@@ -43621,7 +43621,7 @@ MonoBehaviour:
   scrollPos: {x: 151.6464, y: 99.98581}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 200
+  blockViewHeight: 541
   zoom: 0.7000003
   scrollViewRect:
     serializedVersion: 2
@@ -43632,7 +43632,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 1717895915}
   selectedCommands:
-  - {fileID: 1717895912}
+  - {fileID: 1717895910}
   variables: []
   description: 
   stepPause: 0
@@ -44163,6 +44163,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1525251076}
     m_Modifications:
+    - target: {fileID: 4889326924642505830, guid: 20a6019f96a69fe47a9b31d14eca6a89, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5233018256394327615, guid: 20a6019f96a69fe47a9b31d14eca6a89, type: 3}
       propertyPath: m_LocalPosition.x
       value: 150.61
@@ -46049,7 +46053,7 @@ Transform:
   m_GameObject: {fileID: 1841730083}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 22.26, y: -13.14, z: 0.03416429}
+  m_LocalPosition: {x: -13.1, y: 1.54, z: 0.03416429}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46558,6 +46562,10 @@ PrefabInstance:
     - target: {fileID: 1118939489135703094, guid: 393f275348c300b4cb1c0cd46a2e5db3, type: 3}
       propertyPath: m_Size.x
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4169785763633293894, guid: 393f275348c300b4cb1c0cd46a2e5db3, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6312781762856621471, guid: 393f275348c300b4cb1c0cd46a2e5db3, type: 3}
       propertyPath: m_Name
@@ -47175,7 +47183,7 @@ Transform:
   m_GameObject: {fileID: 1902319971}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.34, y: 1.52, z: 0}
+  m_LocalPosition: {x: -15.23, y: 0.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -47318,6 +47326,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 2046464320}
   itemSlotsParent: {fileID: 226337139}
+  slots:
+  - {fileID: 1055417446}
+  - {fileID: 389604862}
+  - {fileID: 1530336659}
+  - {fileID: 1700574331}
+  - {fileID: 1667846666}
+  - {fileID: 2076635310}
+  - {fileID: 458534976}
 --- !u!1001 &1906473601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48139,9 +48155,8 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 1945933967}
-  selectedCommands:
-  - {fileID: 1945933995}
+  - {fileID: 1945933976}
+  selectedCommands: []
   variables:
   - {fileID: 1945933968}
   - {fileID: 1945933972}
@@ -49839,7 +49854,7 @@ Transform:
   m_GameObject: {fileID: 1965312285}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.340004, y: 1.52, z: -10}
+  m_LocalPosition: {x: -15.230003, y: 0.97000027, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

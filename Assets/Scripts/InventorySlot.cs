@@ -6,6 +6,7 @@ namespace NEDDY
     /// <summary>
     /// 口袋
     /// </summary>
+    [System.Serializable]
     public class InventorySlot : MonoBehaviour
     {
         public bool 佔用狀態 = false; // 子物件的狀態

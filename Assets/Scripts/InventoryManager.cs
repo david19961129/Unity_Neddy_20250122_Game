@@ -10,6 +10,8 @@ namespace NEDDY
         public GameObject inventoryUI; // 背包 UI
         public static InventoryManager Instance;
         public Transform itemSlotsParent; // 口袋的父物件（背包 UI）
+        
+        public InventorySlot[] slots;
 
         void Awake()
         {

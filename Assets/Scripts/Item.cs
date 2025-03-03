@@ -31,7 +31,7 @@ namespace NEDDY
             if (Input.GetKeyDown(KeyCode.E))
             {
                 float distanceToLetter = Vector3.Distance(transform.position, player.transform.position);
-                if (distanceToLetter < 1.0f)
+                if (distanceToLetter < 2.0f)
                 {
                     PlaceItemInPocket(); // 找到合適的口袋並存放道具
                 }
@@ -46,13 +46,16 @@ namespace NEDDY
                 return;
             }
 
-            foreach (Transform pocket in inventoryManager.itemSlotsParent) // 遍歷所有口袋
+            var slots = inventoryManager.slots;
+
+            // foreach (Transform pocket in inventoryManager.itemSlotsParent) // 遍歷所有口袋
+            foreach (InventorySlot slot in slots) // 遍歷所有口袋
             {
-                InventorySlot slot = pocket.GetComponent<InventorySlot>(); // 獲取口袋的狀態腳本
+                // InventorySlot slot = pocket.GetComponent<InventorySlot>(); // 獲取口袋的狀態腳本
                 if (slot != null && !slot.佔用狀態) // 如果口袋是空的
                 {
-                    Debug.Log($"將 {itemName} 放入 {pocket.name}");
-                    transform.SetParent(pocket, false); // 設置道具為該口袋的子物件
+                    Debug.Log($"將 {itemName} 放入 {slot.name}");
+                    transform.SetParent(slot.transform, false); // 設置道具為該口袋的子物件
                     transform.localPosition = Vector3.zero; // 重設位置
 
                     slot.佔用狀態 = true; // 設置口袋為已佔用
@@ -61,7 +64,7 @@ namespace NEDDY
 
                     gameObject.SetActive(false); // 撿起後隱藏
 
-                    Debug.Log($"道具 {itemName} 已存入 {pocket.name}");
+                    Debug.Log($"道具 {itemName} 已存入 {slot.name}");
                     return; // 成功放入後，結束函式
                 }
             }
